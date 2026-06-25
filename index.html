@@ -4,89 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premier Academics | Premium Academic Bowl Questions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --purple-brand: #4A154B; 
-            --dark-text: #2D3748;
+            --purple-accent: #6B2172;
+            --purple-light: #F9F5FA;
+            --dark-text: #1A202C;
             --light-bg: #FFFFFF;
-            --gray-subtle: #F7FAFC;
+            --gray-subtle: #EDF2F7;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
             padding: 0;
             color: var(--dark-text);
             background-color: var(--light-bg);
-            line-height: 1.6;
+            line-height: 1.7;
+            scroll-behavior: smooth;
         }
 
+        /* Fixed Navigation Header with a subtle blur effect */
         header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%; /* Increased vertical padding to give the large logo breathing room */
-            background: var(--light-bg);
-            border-bottom: 2px solid var(--gray-subtle);
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
+            padding: 0.5rem 8%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-subtle);
         }
 
         .logo-container img {
-            height: 120px; /* Made even larger for great visibility */
+            height: 110px; 
             width: auto;
-            background-color: #FFFFFF; 
             display: block;
         }
 
         nav {
             display: flex;
-            align-items: center; /* Ensures menu links perfectly align with the middle of the logo */
+            align-items: center;
         }
 
         nav a {
-            margin-left: 25px;
+            margin-left: 30px;
             text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.2s;
+            color: #4A5568;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            position: relative;
         }
 
         nav a:hover {
             color: var(--purple-brand);
         }
 
+        /* Subtle animated underline link effect */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--purple-brand);
+            transition: width 0.2s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section with an elegant layered layout */
         .hero {
             text-align: center;
-            padding: 5rem 1rem;
-            background: linear-gradient(135deg, #ffffff 0%, #f9f6fe 100%);
+            padding: 7rem 2rem 6rem;
+            background: radial-gradient(circle at top right, rgba(107, 33, 114, 0.05) 0%, rgba(255, 255, 255, 1) 70%),
+                        linear-gradient(135deg, #ffffff 0%, var(--purple-light) 100%);
+            border-bottom: 1px solid var(--gray-subtle);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--purple-brand);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4A5568;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-weight: 400;
         }
 
         .btn-primary {
             background-color: var(--purple-brand);
             color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
+            padding: 14px 32px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1.05rem;
             display: inline-block;
-            margin-top: 1rem;
+            box-shadow: 0 4px 14px rgba(74, 21, 75, 0.2);
+            transition: all 0.2s ease;
         }
 
+        .btn-primary:hover {
+            background-color: var(--purple-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 21, 75, 0.3);
+        }
+
+        /* Section layout updates for beautiful scannability */
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 3rem 1rem;
+            padding: 6rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            color: var(--purple-brand);
+            margin-bottom: 3rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        /* Visual enhancement cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--gray-subtle);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(74, 21, 75, 0.06);
+            border-color: rgba(74, 21, 75, 0.15);
+        }
+
+        .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: var(--purple-light);
+            border-radius: 8px;
+            margin-bottom: 1.25rem;
+            color: var(--purple-brand);
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.35rem;
+            color: var(--purple-brand);
+        }
+
+        .card p {
+            margin: 0;
+            color: #718096;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -105,13 +212,30 @@
 
     <section class="hero">
         <h1>Quality Academic Bowl Questions</h1>
-        <p>Founded in 2024, Premier Academics LLC is dedicated to providing elite, thoroughly researched competition sets.</p>
+        <p>Founded in 2024, Premier Academics LLC is dedicated to providing elite, thoroughly researched competition sets that elevate academic tournaments.</p>
         <a href="#order" class="btn-primary">Place an Order</a>
     </section>
 
     <div class="container" id="about">
-        <h2>Our Mission</h2>
-        <p>We craft engaging, balanced, and highly accurate questions to elevate academic competition...</p>
+        <h2 class="section-title">Our Focus Areas</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Elite Quality</h3>
+                <p>Engaging, perfectly balanced, and meticulously verified question pyramids drafted by experienced competitors.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Quick Delivery</h3>
+                <p>Flawless packet logistics ensuring your competition structures are shipped and ready long before tournament day.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <h3>Tournament Proven</h3>
+                <p>Designed to provide optimal categorization distributions across science, literature, history, fine arts, and pop culture.</p>
+            </div>
+        </div>
     </div>
 
 </body>
