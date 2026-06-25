@@ -25,7 +25,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 5%; /* Minimized padding to keep header height balanced with larger logo */
+            padding: 1.5rem 5%; /* Increased vertical padding to give the large logo breathing room */
             background: var(--light-bg);
             border-bottom: 2px solid var(--gray-subtle);
         }
@@ -36,20 +36,23 @@
         }
 
         .logo-container img {
-            height: 110px; /* Scaled up significantly for premium brand visibility */
+            height: 120px; /* Made even larger for great visibility */
             width: auto;
             background-color: #FFFFFF; 
-            padding: 0;
-            border-radius: 0;
-            box-shadow: none;
             display: block;
         }
 
+        nav {
+            display: flex;
+            align-items: center; /* Ensures menu links perfectly align with the middle of the logo */
+        }
+
         nav a {
-            margin-left: 20px;
+            margin-left: 25px;
             text-decoration: none;
             color: var(--dark-text);
             font-weight: 500;
+            font-size: 1.1rem;
             transition: color 0.2s;
         }
 
