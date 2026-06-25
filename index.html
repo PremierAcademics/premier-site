@@ -196,27 +196,28 @@
             font-size: 1rem;
         }
 
-        /* Embedded Form Container Styles */
+        /* Redesigned Clean Call-to-Action Order Container */
         .form-section {
             background-color: var(--purple-light);
             border-top: 1px solid var(--gray-subtle);
         }
 
-        .form-wrapper {
-            max-width: 850px;
+        .order-box {
+            max-width: 800px;
             margin: 0 auto;
             background: #FFFFFF;
             border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(74, 21, 75, 0.05);
-            border: 1px solid rgba(74, 21, 75, 0.08);
+            padding: 4rem 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(74, 21, 75, 0.04);
+            border: 1px solid rgba(74, 21, 75, 0.06);
         }
 
-        .form-wrapper iframe {
-            display: block;
-            width: 100%;
-            height: 1200px; /* Expanded height to force the full form content to render raw inputs */
-            border: none;
+        .order-box p {
+            color: #4A5568;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
         }
     </style>
 </head>
@@ -229,7 +230,7 @@
         <nav>
             <a href="#about">About</a>
             <a href="#samples">Sample Games</a>
-            <a href="#order">Order Form</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank">Order Form</a>
         </nav>
     </header>
 
@@ -263,9 +264,12 @@
 
     <section class="form-section" id="order">
         <div class="container">
-            <h2 class="section-title">Place Your Order</h2>
-            <div class="form-wrapper">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading order form...</iframe>
+            <div class="order-box">
+                <h2 style="font-size: 2.25rem; color: var(--purple-brand); margin: 0 0 1rem 0; font-weight: 700;">Ready to Place Your Order?</h2>
+                <p>Click below to open our official order form in a secure tab. You can choose game structures, enter tournament schedules, and upload tax documentation directly.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank" class="btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">
+                    Open Official Order Form ↗
+                </a>
             </div>
         </div>
     </section>
