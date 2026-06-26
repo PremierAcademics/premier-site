@@ -41,9 +41,15 @@
             z-index: 100;
         }
 
+        /* RESTORED: Logo grows on hover */
         .logo-container img {
-            height: 50px;
+            height: 60px;
             display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
         }
 
         nav a {
@@ -58,9 +64,14 @@
             color: var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero Section (Centering Ensured) */
         .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            min-height: 40vh;
             padding: 5rem 2rem;
             background-color: var(--primary-light);
             border-bottom: 1px solid var(--border-color);
@@ -146,7 +157,7 @@
             color: var(--primary-color);
         }
 
-        /* Samples Section */
+        /* Samples Section & 8.5x11 Paper Wrapper */
         .samples-section {
             background-color: var(--card-bg);
             border-top: 1px solid var(--border-color);
@@ -154,17 +165,18 @@
         }
 
         .embed-container {
-            max-width: 800px;
+            max-width: 850px; /* Standard width matching paper layout proportions */
             margin: 0 auto;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background: #ffffff;
         }
 
         .embed-container iframe {
             width: 100%;
-            height: 650px;
+            height: 1050px; /* Tall height to beautifully mimic standard vertical page sheets */
             border: none;
             display: block;
         }
@@ -211,7 +223,7 @@
                 font-size: 2rem;
             }
             .embed-container iframe {
-                height: 500px;
+                height: 600px; /* Slightly shorter window for mobile screens */
             }
         }
     </style>
@@ -266,7 +278,8 @@
             <p class="section-intro">Preview our writing style below.</p>
             
             <div class="embed-container">
-                <iframe src="https://docs.google.com/document/d/e/2PACX-1vQsqn-3OXxabOZClEOjnn5qXZfNhH1ZHIe9bUanODZRqjxKAaMU2rzIRvKDQFY2bHm0WJRYC-hvNF4e/preview?embedded=true"></iframe>            </div>
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vQsqn-3OXxabOZClEOjnn5qXZfNhH1ZHIe9bUanODZRqjxKAaMU2rzIRvKDQFY2bHm0WJRYC-hvNF4e/preview?embedded=true"></iframe>
+            </div>
         </div>
     </section>
 
