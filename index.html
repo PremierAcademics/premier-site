@@ -211,21 +211,20 @@
             border-top: 1px solid var(--gray-subtle);
         }
 
-        /* UPDATED: Centered with max-width and clean 8.5x11 vertical proportions */
         .samples-wrapper {
-            max-width: 850px;
-            margin: 0 auto;
+            max-width: 850px; /* Gives the PDF an ideal reading width */
+            margin: 0 auto;   /* Centers the entire container on the page */
             background: #FFFFFF;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(74, 21, 75, 0.05);
             border: 1px solid rgba(74, 21, 75, 0.08);
         }
-
+        
         .samples-wrapper iframe {
             display: block;
             width: 100%;
-            height: 1000px;
+            height: 900px;    /* Makes the viewport tall enough to see the document structure */
             border: none;
         }
 
