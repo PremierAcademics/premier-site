@@ -48,10 +48,21 @@
             border-bottom: 1px solid var(--gray-subtle);
         }
 
+        .logo-container a {
+            display: block;
+            text-decoration: none;
+        }
+
         .logo-container img {
             height: 110px; 
             width: auto;
             display: block;
+            transition: transform 0.2s ease;
+        }
+
+        /* Subtle interactive scale when hovering over the logo home button */
+        .logo-container img:hover {
+            transform: scale(1.02);
         }
 
         nav {
@@ -223,22 +234,23 @@
 <body>
 
     <header>
+        <!-- Logo now wraps in a top anchor link to serve as a home button -->
         <div class="logo-container">
-            <img src="/premier-site/Premier_Academics_logo_outline_cube.png" alt="Premier Academics Logo">
+            <a href="#">
+                <img src="/premier-site/Premier_Academics_logo_outline_cube.png" alt="Premier Academics Logo">
+            </a>
         </div>
         <nav>
             <a href="#about">About</a>
             <a href="#samples">Sample Games</a>
-            <!-- Skips intermediate step, opens form securely -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2O0qEAnuN7Vz4H7W_X5g9-p2GkY_9vO86p4m6n7_Z3lBD0w/viewform" target="_blank">Order Form</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank">Order Form</a>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Quality Academic Bowl Questions</h1>
         <p>Founded in 2024, Premier Academics LLC is dedicated to providing elite, thoroughly researched competition sets that elevate academic tournaments.</p>
-        <!-- Skips intermediate step, opens form securely -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2O0qEAnuN7Vz4H7W_X5g9-p2GkY_9vO86p4m6n7_Z3lBD0w/viewform" target="_blank" class="btn-primary">Place an Order</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank" class="btn-primary">Place an Order</a>
     </section>
 
     <div class="container" id="about">
@@ -263,17 +275,16 @@
         </div>
     </div>
 
-    <!-- Corrected Anchor ID Section for Interactive Sample Packet Showcase -->
+    <!-- Sample Packet Showcase Section -->
     <section class="samples-section" id="samples">
         <div class="container">
-            <h2 class="section-title">Sample Packet</h2>
+            <h2 class="section-title">2025-2026 Sample Packet</h2>
             <div style="text-align: center; margin-bottom: 2.5rem;">
                 <p style="color: #4A5568; max-width: 650px; margin: 0 auto; font-size: 1.1rem;">
                     Preview our writing style below. Our questions utilize premium academic pyramid structures with diverse clues tailored for competitive balance.
                 </p>
             </div>
             <div class="samples-wrapper">
-                <!-- Clean embedded viewer using the document's official public preview route -->
                 <iframe src="https://docs.google.com/document/d/1QdCg3PiF9j_J6z33hmqkelsW4eGpVlp0CcSAU32lBD0/preview" allow="autoplay"></iframe>
             </div>
         </div>
