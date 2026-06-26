@@ -153,6 +153,22 @@
             border-bottom: 1px solid var(--border-color);
         }
 
+        .embed-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .embed-container iframe {
+            width: 100%;
+            height: 650px;
+            border: none;
+            display: block;
+        }
+
         /* Footer */
         footer {
             background-color: #1a1a1a;
@@ -193,6 +209,9 @@
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .embed-container iframe {
+                height: 500px;
             }
         }
     </style>
@@ -246,10 +265,9 @@
             <h2 class="section-title">Sample Packet</h2>
             <p class="section-intro">Preview our writing style below.</p>
             
-            <div style="text-align: center; margin: 1rem 0 2rem 0;">
-                <a href="./premier-academics-sample-packet.pdf" target="_blank" class="btn-primary">
-                    View Sample Packet (PDF)
-                </a>
+            <div class="embed-container">
+                <!-- REPLACE THE URL BELOW WITH YOUR PUBLISHED GOOGLE DOC EMBED URL -->
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vREU_EXAMPLE_ID_HERE/pubhtml?embedded=true"></iframe>
             </div>
         </div>
     </section>
