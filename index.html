@@ -353,8 +353,11 @@
             <p class="section-intro">
                 Preview our writing style below.
             </p>
-            <div class="samples-wrapper" style="max-width: 850px; margin: 0 auto;">
-            <iframe src="./premier-academics-sample-packet.pdf" style="width: 100%; height: 900px; display: block; border: none;"></iframe>
+            <!-- Inline styles guarantee centering and container dimensions immediately -->
+            <div style="max-width: 850px; margin: 0 auto; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(74, 21, 75, 0.05); border: 1px solid rgba(74, 21, 75, 0.08);">
+                <!-- Parameters hide the browser toolbars and scale the document to fit the box width perfectly -->
+                <iframe src="./premier-academics-sample-packet.pdf#toolbar=0&navpanes=0&view=FitW" style="width: 100%; height: 1100px; display: block; border: none;"></iframe>
+            </div>
         </div>
     </section>
 
