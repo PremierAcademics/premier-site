@@ -1,13 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier Academics | Premium Academic Bowl Questions</title>
+    <title>Premier Academics | Academic Bowl Questions and Tournament Materials</title>
+
     <!-- Import Google Fonts for a more premium, modern typographic look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -33,7 +35,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Fixed Navigation Header with a subtle blur effect */
         header {
             position: sticky;
             top: 0;
@@ -60,7 +61,6 @@
             transition: transform 0.2s ease;
         }
 
-        /* Subtle interactive scale when hovering over the logo home button */
         .logo-container img:hover {
             transform: scale(1.02);
         }
@@ -84,7 +84,6 @@
             color: var(--purple-brand);
         }
 
-        /* Subtle animated underline link effect */
         nav a::after {
             content: '';
             position: absolute;
@@ -100,7 +99,6 @@
             width: 100%;
         }
 
-        /* Hero Section with an elegant layered layout */
         .hero {
             text-align: center;
             padding: 7rem 2rem 6rem;
@@ -120,7 +118,7 @@
         .hero p {
             font-size: 1.25rem;
             color: #4A5568;
-            max-width: 700px;
+            max-width: 760px;
             margin: 0 auto 2.5rem;
             font-weight: 400;
         }
@@ -144,7 +142,6 @@
             box-shadow: 0 6px 20px rgba(74, 21, 75, 0.3);
         }
 
-        /* Standardized Section Constraints */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -155,11 +152,18 @@
             text-align: center;
             font-size: 2.25rem;
             color: var(--purple-brand);
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        /* Visual enhancement cards */
+        .section-intro {
+            text-align: center;
+            color: #4A5568;
+            max-width: 760px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+        }
+
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -207,7 +211,6 @@
             font-size: 1rem;
         }
 
-        /* Sample Games Section Layout styling */
         .samples-section {
             background-color: var(--purple-light);
             border-top: 1px solid var(--gray-subtle);
@@ -229,66 +232,162 @@
             height: 750px;
             border: none;
         }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #FFFFFF;
+            border-top: 1px solid var(--gray-subtle);
+            color: #4A5568;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer .footer-name {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--purple-brand);
+        }
+
+        footer .footer-description {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--purple-brand);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem 2rem;
+            }
+
+            .logo-container img {
+                height: 90px;
+            }
+
+            nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0.5rem 1rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 4rem 1.5rem;
+            }
+
+            .samples-wrapper iframe {
+                height: 600px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Logo now wraps in a top anchor link to serve as a home button -->
         <div class="logo-container">
             <a href="#">
                 <img src="/premier-site/Premier_Academics_logo_outline_cube.png" alt="Premier Academics Logo">
             </a>
         </div>
+
         <nav>
             <a href="#about">About</a>
-            <a href="#samples">Sample Games</a>
+            <a href="#samples">Sample Packet</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank">Order Form</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Quality Academic Bowl Questions</h1>
-        <p>Founded in 2024, Premier Academics LLC is dedicated to providing elite, thoroughly researched competition sets that elevate academic tournaments.</p>
+        <h1>Academic Bowl Questions Built for the Full Game</h1>
+        <p>
+            Premier Academics LLC provides carefully researched academic bowl questions for schools, conferences, and tournaments. 
+            Our sets are built to reward real classroom knowledge across STEM, social studies, literature, fine arts, pop culture, and current events.
+        </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank" class="btn-primary">Place an Order</a>
     </section>
 
     <div class="container" id="about">
-        <h2 class="section-title">Our Focus Areas</h2>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-intro">
+            Premier Academics was created to give academic bowl programs dependable, balanced, and engaging question materials. 
+            As we move into the 2026–2027 school year and beyond, our goal is to support competitions with questions that are clear, fair, accurate, and useful for students, coaches, and moderators.
+        </p>
         
         <div class="card-grid">
             <div class="card">
                 <div class="card-icon">🎯</div>
-                <h3>Elite Quality</h3>
-                <p>Engaging, perfectly balanced, and meticulously verified question pyramids drafted by experienced competitors.</p>
+                <h3>Balanced Academic Coverage</h3>
+                <p>
+                    We write with the whole competition in mind. Our materials give meaningful attention to STEM, social studies, literature, fine arts, pop culture, and current events instead of relying too heavily on one subject area.
+                </p>
             </div>
+
             <div class="card">
                 <div class="card-icon">⚡</div>
-                <h3>Quick Delivery</h3>
-                <p>Flawless packet logistics ensuring your competition structures are shipped and ready long before tournament day.</p>
+                <h3>Clear, Classroom-Based Questions</h3>
+                <p>
+                    Our questions are designed to be specific, fair, and answerable for students who are engaged in high school academic content. We focus on strong clues, clean wording, and answers that reward knowledge rather than guesswork.
+                </p>
             </div>
+
             <div class="card">
                 <div class="card-icon">🏆</div>
-                <h3>Tournament Proven</h3>
-                <p>Designed to provide optimal categorization distributions across science, literature, history, fine arts, and pop culture.</p>
+                <h3>Tournament-Ready Materials</h3>
+                <p>
+                    Whether you need regular-season games, conference sets, or tournament materials, our goal is to provide organized, reliable question packets that are ready for moderators, coaches, and students.
+                </p>
             </div>
         </div>
     </div>
 
-    <!-- Sample Packet Showcase Section -->
     <section class="samples-section" id="samples">
         <div class="container">
-            <h2 class="section-title">2025-2026 Sample Packet</h2>
-            <div style="text-align: center; margin-bottom: 2.5rem;">
-                <p style="color: #4A5568; max-width: 650px; margin: 0 auto; font-size: 1.1rem;">
-                    Preview our writing style below. Our questions utilize premium academic pyramid structures with diverse clues tailored for competitive balance.
-                </p>
-            </div>
+            <h2 class="section-title">Sample Packet</h2>
+            <p class="section-intro">
+                Preview our writing style below. Premier Academics is committed to producing accurate, balanced, and engaging questions that reflect the full range of academic bowl competition.
+            </p>
+
             <div class="samples-wrapper">
                 <iframe src="https://docs.google.com/document/d/1QdCg3PiF9j_J6z33hmqkelsW4eGpVlp0CcSAU32lBD0/preview" allow="autoplay"></iframe>
             </div>
         </div>
     </section>
 
+    <footer>
+        <p class="footer-name">Premier Academics LLC</p>
+        <p class="footer-description">Questions, packets, and tournament materials for academic bowl programs.</p>
+        <p>
+            Contact us at 
+            <a href="mailto:premieracademics.ok@gmail.com">premieracademics.ok@gmail.com</a>
+        </p>
+    </footer>
+
 </body>
 </html>
+```
