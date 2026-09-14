@@ -206,6 +206,90 @@
             font-size: 1rem;
         }
 
+        .distribution-section {
+            border-top: 1px solid var(--gray-subtle);
+            scroll-margin-top: 180px;
+        }
+
+        .distribution-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .distribution-grid > div {
+            padding: 1.25rem 0.5rem;
+            text-align: center;
+            background: var(--purple-light);
+            border: 1px solid #E9DDEA;
+            border-radius: 12px;
+        }
+
+        .distribution-grid dt {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .distribution-grid dd {
+            margin: 0.25rem 0 0;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--purple-brand);
+        }
+
+        .category-details {
+            border: 1px solid #E9DDEA;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .category-details summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            color: var(--purple-brand);
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .category-details summary::-webkit-details-marker { display: none; }
+        .category-details summary::after {
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+        .category-details[open] summary::after { transform: rotate(225deg); }
+        .category-details summary:hover { background: var(--purple-light); }
+        .category-details summary:focus-visible {
+            outline: 3px solid var(--purple-accent);
+            outline-offset: -4px;
+        }
+        .category-content { padding: 0 1.5rem 1.5rem; }
+        .category-content > p { color: #4A5568; margin: 0.5rem 0 1.25rem; }
+        .subcategory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem 2rem;
+        }
+        .subcategory-grid h3 { margin: 0 0 0.35rem; color: var(--purple-brand); font-size: 1rem; }
+        .subcategory-grid p { margin: 0; color: #4A5568; }
+
+        @media (max-width: 900px) {
+            .distribution-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        @media (max-width: 480px) {
+            .distribution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .subcategory-grid { grid-template-columns: 1fr; }
+        }
+
         .samples-section {
             background-color: var(--purple-light);
             border-top: 1px solid var(--gray-subtle);
@@ -304,6 +388,7 @@
         </div>
         <nav>
             <a href="#about">About</a>
+            <a href="#distribution">Question Breakdown</a>
             <a href="#samples">Sample Packet</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHbtFK3Kx0Z2DCCmwKm0QDvnpFLxD2E04SzxtX4xdheTwQnA/viewform" target="_blank">Order Form</a>
         </nav>
@@ -346,6 +431,34 @@
             </div>
         </div>
     </div>
+
+    <section class="distribution-section" id="distribution" aria-labelledby="distribution-title">
+        <div class="container">
+            <h2 class="section-title" id="distribution-title">Question Breakdown</h2>
+            <p class="section-intro">Each game includes <strong>50 questions total, including 10 extra questions</strong>, distributed across six categories. The breakdown below includes those extra questions.</p>
+            <dl class="distribution-grid" aria-label="Questions per game by category">
+                <div><dt>Pop Culture</dt><dd>6</dd></div>
+                <div><dt>Fine Arts</dt><dd>6</dd></div>
+                <div><dt>Literature</dt><dd>9</dd></div>
+                <div><dt>Math</dt><dd>10</dd></div>
+                <div><dt>Science</dt><dd>9</dd></div>
+                <div><dt>Social Studies</dt><dd>10</dd></div>
+            </dl>
+            <details class="category-details">
+                <summary>Explore category topics</summary>
+                <div class="category-content">
+                    <p>These categories include, but are not limited to, the following topics:</p>
+                    <div class="subcategory-grid">
+                        <div><h3>Pop Culture</h3><p>Current Events, Food, Movies, Music, Sports, TV Shows.</p></div>
+                        <div><h3>Fine Arts</h3><p>Artists &amp; Artworks, Art Movements, Composers, Music Theory, Religion.</p></div>
+                        <div><h3>Literature</h3><p>Grammar, Literary Terms, Literary Titles, Characters, Settings, Authors.</p></div>
+                        <div><h3>Science</h3><p>Biology, Chemistry, Earth Science, Physics, Psychology.</p></div>
+                        <div><h3>Social Studies</h3><p>Economics, Geography, Government, Oklahoma History, U.S. History, World History.</p></div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
 
     <section class="samples-section" id="samples">
         <div class="container">
